@@ -76,7 +76,10 @@ $ docker run --cap-add=ALL -p 127.0.0.1:80:80 -e VIRTUAL_HOST=magento2.docker.lo
 - After container is launched, start services
 
 ```
-$ service php-fpm start && service nginx start && service mysqld start && service varnish start
+$ service php-fpm restart && service nginx restart && service mysqld restart && service varnish restart
+$ service php-fpm status && service nginx status && service mysqld status && service varnish status
+
 ```
+Repeat ```service start``` for each service not showing up correctly.
 
 *This container is for testing use - not for production environment.*
